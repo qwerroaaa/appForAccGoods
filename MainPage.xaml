@@ -91,6 +91,11 @@
                 HeightRequest="92"
                 HorizontalOptions="FillAndExpand"
                 HasShadow="False">
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImportButtonClicked"/>
+                    </Frame.GestureRecognizers>
+
                     <VerticalStackLayout HorizontalOptions="Center"
                     VerticalOptions="Center"
                     Spacing="0">
@@ -208,6 +213,11 @@
                     HorizontalOptions="FillAndExpand"
                     HasShadow="False"
                     Margin="0,0,0,0">
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnReportsButtonClicked"/>
+                    </Frame.GestureRecognizers>
+
                     <VerticalStackLayout HorizontalOptions="Center"
                             VerticalOptions="Center"
                             Spacing="0">

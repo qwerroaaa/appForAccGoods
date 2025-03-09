@@ -18,4 +18,16 @@
         ContentTemplate="{DataTemplate local:ProductsPage}" 
         Route="ProductsPage"
         Shell.NavBarIsVisible="False"/>
+
+    <ShellContent 
+        Title="Отчеты" 
+        ContentTemplate="{DataTemplate local:ReportsPage}" 
+        Route="ReportsPage"
+        Shell.NavBarIsVisible="False"/>
+
+    <ShellContent 
+        Title="Приходы" 
+        ContentTemplate="{DataTemplate local:ImportPage}" 
+        Route="ImportPage"
+        Shell.NavBarIsVisible="False"/>
 </Shell>

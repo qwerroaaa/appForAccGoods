@@ -56,8 +56,8 @@
         </Grid>
 
         <!-- Основной контент -->
-        <ScrollView>
-            <VerticalStackLayout Padding="10">
+        <ScrollView Grid.Row="2">
+            <VerticalStackLayout>
                 <!-- Здесь твои карточки товаров -->
             </VerticalStackLayout>
         </ScrollView>
@@ -66,8 +66,8 @@
            BackgroundColor="#EC9704"
            Padding="10"
            CornerRadius="50"
-           WidthRequest="30"
-           HeightRequest="30"
+           WidthRequest="32"
+           HeightRequest="32"
            HasShadow="True"
            HorizontalOptions="End"
            VerticalOptions="End"

@@ -17,6 +17,16 @@
         {
             await Shell.Current.GoToAsync("ProductsPage");
         }
+
+        private async void OnReportsButtonClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("ReportsPage");
+        }
+
+        private async void OnImportButtonClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("ImportPage");
+        }
     }
 
 }

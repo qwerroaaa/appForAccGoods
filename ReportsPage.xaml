@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appForAccGoods.ReportsPage"
+             BackgroundColor="#BBBBBB">
+
+    <Grid RowDefinitions="Auto,Auto,*">
+
+        <!-- Шапка (чёрный фон с гамбургер-меню и заголовком) -->
+        <Grid Grid.Row="0"
+      HeightRequest="50"
+      BackgroundColor="#292929"
+      Padding="10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Иконка "гамбургер" -->
+            <Image Source="menu_white.png"
+           WidthRequest="24"
+           HeightRequest="24"
+           VerticalOptions= "Center"
+           Grid.Column="0"/>
+
+            <Image Source="search_white.png"
+           WidthRequest="24"
+           HeightRequest="24"
+           VerticalOptions= "Center"
+           Grid.Column="2"/>
+
+            <!-- Заголовок "Отчеты" -->
+            <Label Text="Отчеты"
+           Grid.Column="1"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           TextColor="White"
+           FontSize="24"
+           FontAttributes="Bold"
+           Margin="-10,0,0,0"/>
+        </Grid>
+
+        <!-- Оранжевая полоса с надписью "Основной склад" -->
+        <Grid Grid.Row="1"
+      HeightRequest="29"
+      BackgroundColor="#EC9704"
+      Padding="0">
+            <Label Text="Основной склад"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           TextColor="White"
+           FontSize="16"
+           FontAttributes="Bold"/>
+        </Grid>
+
+        <!-- Основной контент -->
+        <ScrollView Grid.Row="2">
+            <VerticalStackLayout>
+                <Frame BackgroundColor="#FFFFFF"
+                    CornerRadius="0"
+                    Padding="0"
+                    HeightRequest="66"
+                    HorizontalOptions="FillAndExpand"
+                    HasShadow="False">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Текст в первой колонке -->
+                        <Label Text="Движения товара"
+                       TextColor="#292929"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Start"
+                       VerticalOptions="Center"
+                       Margin="10,0,0,0"
+                       Grid.Column="0"/>
+
+                        <!-- Пустая колонка, заполняющая пространство -->
+                        <BoxView Grid.Column="1"
+                                 BackgroundColor="#FFFFFF"/>
+
+                        <!-- Изображение в третьей колонке -->
+                        <Image Source="bookmark.png"
+                       WidthRequest="24"
+                       HeightRequest="24"
+                       VerticalOptions="Center"
+                       Grid.Column="2"
+                               Margin="0,0,15,0"/>
+                    </Grid>
+                </Frame>
+
+                <Frame BackgroundColor="#FFFFFF"
+                    CornerRadius="0"
+                    Padding="0"
+                    HeightRequest="66"
+                    HorizontalOptions="FillAndExpand"
+                    HasShadow="False">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Текст в первой колонке -->
+                        <Label Text="Журнал транзакций"
+                           TextColor="#292929"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Start"
+                           VerticalOptions="Center"
+                           Margin="10,0,0,0"
+                           Grid.Column="0"/>
+
+                        <!-- Пустая колонка, заполняющая пространство -->
+                        <BoxView Grid.Column="1"
+                 BackgroundColor="#FFFFFF"/>
+
+                        <!-- Изображение в третьей колонке -->
+                        <Image Source="bookmark.png"
+                           WidthRequest="24"
+                           HeightRequest="24"
+                           VerticalOptions="Center"
+                           Grid.Column="2"
+                           Margin="0,0,15,0"/>
+                    </Grid>
+                </Frame>
+
+                <Frame BackgroundColor="#FFFFFF"
+                    CornerRadius="0"
+                    Padding="0"
+                    HeightRequest="66"
+                    HorizontalOptions="FillAndExpand"
+                    HasShadow="False">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Текст в первой колонке -->
+                        <Label Text="Список документов"
+                           TextColor="#292929"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Start"
+                           VerticalOptions="Center"
+                           Margin="10,0,0,0"
+                           Grid.Column="0"/>
+
+                        <!-- Пустая колонка, заполняющая пространство -->
+                        <BoxView Grid.Column="1"
+                             BackgroundColor="#FFFFFF"/>
+
+                        <!-- Изображение в третьей колонке -->
+                        <Image Source="bookmark.png"
+                           WidthRequest="24"
+                           HeightRequest="24"
+                           VerticalOptions="Center"
+                           Grid.Column="2"
+                           Margin="0,0,15,0"/>
+                    </Grid>
+                </Frame>
+
+                <Frame BackgroundColor="#FFFFFF"
+                    CornerRadius="0"
+                    Padding="0"
+                    HeightRequest="66"
+                    HorizontalOptions="FillAndExpand"
+                    HasShadow="False">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Текст в первой колонке -->
+                        <Label Text="Покупки по товарам"
+                           TextColor="#292929"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Start"
+                           VerticalOptions="Center"
+                           Margin="10,0,0,0"
+                           Grid.Column="0"/>
+
+                        <!-- Пустая колонка, заполняющая пространство -->
+                        <BoxView Grid.Column="1"
+                            BackgroundColor="#FFFFFF"/>
+
+                        <!-- Изображение в третьей колонке -->
+                        <Image Source="bookmark.png"
+                           WidthRequest="24"
+                           HeightRequest="24"
+                           VerticalOptions="Center"
+                           Grid.Column="2"
+                           Margin="0,0,15,0"/>
+                    </Grid>
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
