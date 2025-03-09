@@ -13,6 +13,10 @@
         {
             count++;
         }
+        private async void OnProductsButtonClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("ProductsPage");
+        }
     }
 
 }

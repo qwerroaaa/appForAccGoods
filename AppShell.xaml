@@ -12,5 +12,10 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage"
         Shell.NavBarIsVisible="False"/>
-
+    
+    <ShellContent 
+        Title="Товары" 
+        ContentTemplate="{DataTemplate local:ProductsPage}" 
+        Route="ProductsPage"
+        Shell.NavBarIsVisible="False"/>
 </Shell>

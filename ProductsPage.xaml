@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appForAccGoods.ProductsPage"
+             BackgroundColor="#BBBBBB">
+    
+    
+    <Grid RowDefinitions="Auto,Auto,*">
+
+        <!-- Шапка (чёрный фон с гамбургер-меню и заголовком) -->
+        <Grid Grid.Row="0"
+          HeightRequest="50"
+          BackgroundColor="#292929"
+          Padding="10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Иконка "гамбургер" -->
+            <Image Source="menu_white.png"
+               WidthRequest="24"
+               HeightRequest="24"
+               VerticalOptions= "Center"
+               Grid.Column="0"/>
+
+            <Image Source="search_white.png"
+               WidthRequest="24"
+               HeightRequest="24"
+               VerticalOptions= "Center"
+               Grid.Column="2"/>
+
+            <!-- Заголовок "Товары" -->
+            <Label Text="Товары"
+               Grid.Column="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="White"
+               FontSize="24"
+               FontAttributes="Bold"
+               Margin="-15,0,0,0"/>
+        </Grid>
+
+        <!-- Оранжевая полоса с надписью "Основной склад" -->
+        <Grid Grid.Row="1"
+          HeightRequest="29"
+          BackgroundColor="#EC9704"
+          Padding="0">
+            <Label Text="Основной склад"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               TextColor="White"
+               FontSize="16"
+               FontAttributes="Bold"/>
+        </Grid>
+
+        <!-- Основной контент -->
+        <ScrollView>
+            <VerticalStackLayout Padding="10">
+                <!-- Здесь твои карточки товаров -->
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Frame Grid.Row="2"
+           BackgroundColor="#EC9704"
+           Padding="10"
+           CornerRadius="50"
+           WidthRequest="30"
+           HeightRequest="30"
+           HasShadow="True"
+           HorizontalOptions="End"
+           VerticalOptions="End"
+           Margin="0,0,20,20">
+            <Image Source="add_circle.png"
+               WidthRequest="24"
+               HeightRequest="24"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+        </Frame>
+    </Grid>
+</ContentPage>
