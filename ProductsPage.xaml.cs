@@ -7,4 +7,10 @@ public partial class ProductsPage : ContentPage
 		InitializeComponent();
         Shell.SetNavBarIsVisible(this, false);
     }
+
+    private async void OnAddGoodTapped(object sender, EventArgs e)
+    {
+        // Переход на страницу AddGoodPage
+        await Shell.Current.GoToAsync("AddGoodPage");
+    }
 }

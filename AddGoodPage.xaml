@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appForAccGoods.AddGoodPage">
+    
+    <Grid RowDefinitions="Auto,Auto,*">
+
+        <!-- Шапка (чёрный фон с гамбургер-меню и заголовком) -->
+        <Grid Grid.Row="0"
+      HeightRequest="50"
+      BackgroundColor="#292929"
+      Padding="10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            
+            <Image Source="keyboard_return_white.png"
+           WidthRequest="24"
+           HeightRequest="24"
+           VerticalOptions= "Center"
+           Grid.Column="0"/>
+
+            <Image Source="check_white.png"
+           WidthRequest="24"
+           HeightRequest="24"
+           VerticalOptions= "Center"
+           Grid.Column="2"/>
+
+            
+            <Label Text="Добавление товара"
+           Grid.Column="1"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           TextColor="White"
+           FontSize="24"
+           FontAttributes="Bold"
+           Margin="-15,0,0,0"/>
+        </Grid>
+
+        <!-- Оранжевая полоса с надписью "Основной склад" -->
+        <Grid Grid.Row="1"
+      HeightRequest="29"
+      BackgroundColor="#EC9704"
+      Padding="0">
+            <Label Text="Основной склад"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           TextColor="White"
+           FontSize="16"
+           FontAttributes="Bold"/>
+        </Grid>
+
+        <!-- Основной контент -->
+        <ScrollView Grid.Row="2">
+            <VerticalStackLayout>
+                <!-- Здесь твои карточки товаров -->
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

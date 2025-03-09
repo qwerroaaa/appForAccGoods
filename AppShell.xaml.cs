@@ -11,6 +11,12 @@
             Routing.RegisterRoute("ExportPage", typeof(ExportPage));
             Routing.RegisterRoute("DocumentPage", typeof(DocumentPage));
             Routing.RegisterRoute("BarcodeScannerPage", typeof(BarcodeScannerPage));
+            Routing.RegisterRoute("AddGoodPage", typeof(AddGoodPage));
+        }
+
+        private void OnMenuTapped(object sender, EventArgs e)
+        {
+            this.FlyoutIsPresented = !this.FlyoutIsPresented;
         }
     }
 }

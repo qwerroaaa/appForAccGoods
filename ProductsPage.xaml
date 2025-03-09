@@ -72,6 +72,9 @@
            HorizontalOptions="End"
            VerticalOptions="End"
            Margin="0,0,20,20">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnAddGoodTapped"/>
+            </Frame.GestureRecognizers>
             <Image Source="add_circle.png"
                WidthRequest="24"
                HeightRequest="24"

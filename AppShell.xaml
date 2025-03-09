@@ -4,8 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:appForAccGoods"
-    Shell.FlyoutBehavior="Disabled"
-    Title="appForAccGoods">
+    Title="appForAccGoods"
+    FlyoutBehavior="Flyout">
 
     <ShellContent
         Title="Home"
@@ -38,7 +38,7 @@
         Shell.NavBarIsVisible="False"/>
 
     <ShellContent 
-        Title="Расходы" 
+        Title="Документы" 
         ContentTemplate="{DataTemplate local:DocumentPage}" 
         Route="ImportPage"
         Shell.NavBarIsVisible="False"/>
@@ -47,5 +47,11 @@
         Title="Камера" 
         ContentTemplate="{DataTemplate local:BarcodeScannerPage}" 
         Route="BarcodeScannerPage"
+        Shell.NavBarIsVisible="False"/>
+
+    <ShellContent
+        Title="AddGoodPage"
+        ContentTemplate="{DataTemplate local:AddGoodPage}"
+        Route="AddGoodPage"
         Shell.NavBarIsVisible="False"/>
 </Shell>
