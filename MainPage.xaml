@@ -128,6 +128,9 @@
                     HeightRequest="92"
                     HorizontalOptions="FillAndExpand"
                     HasShadow="False">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnExportButtonClicked"/>
+                    </Frame.GestureRecognizers>
                     <VerticalStackLayout HorizontalOptions="Center"
                     VerticalOptions="Center"
                     Spacing="0">
@@ -186,6 +189,9 @@
                     HeightRequest="92"
                     HorizontalOptions="FillAndExpand"
                     HasShadow="False">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnDocumentButtonClicked"/>
+                    </Frame.GestureRecognizers>
                     <VerticalStackLayout HorizontalOptions="Center"
                     VerticalOptions="Center"
                     Spacing="0">

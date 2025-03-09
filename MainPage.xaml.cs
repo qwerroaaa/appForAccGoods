@@ -27,6 +27,16 @@
         {
             await Shell.Current.GoToAsync("ImportPage");
         }
+
+        private async void OnExportButtonClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("ExportPage");
+        }
+
+        private async void OnDocumentButtonClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("DocumentPage");
+        }
     }
 
 }

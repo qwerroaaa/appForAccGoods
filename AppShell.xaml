@@ -30,4 +30,16 @@
         ContentTemplate="{DataTemplate local:ImportPage}" 
         Route="ImportPage"
         Shell.NavBarIsVisible="False"/>
+
+    <ShellContent 
+        Title="Расходы" 
+        ContentTemplate="{DataTemplate local:ExportPage}" 
+        Route="ImportPage"
+        Shell.NavBarIsVisible="False"/>
+
+    <ShellContent 
+        Title="Расходы" 
+        ContentTemplate="{DataTemplate local:DocumentPage}" 
+        Route="ImportPage"
+        Shell.NavBarIsVisible="False"/>
 </Shell>
