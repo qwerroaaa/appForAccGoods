@@ -37,6 +37,10 @@
         {
             await Shell.Current.GoToAsync("DocumentPage");
         }
+        private async void OnCameraButtonClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("BarcodeScannerPage");
+        }
     }
 
 }

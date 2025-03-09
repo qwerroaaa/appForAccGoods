@@ -42,4 +42,10 @@
         ContentTemplate="{DataTemplate local:DocumentPage}" 
         Route="ImportPage"
         Shell.NavBarIsVisible="False"/>
+
+    <ShellContent 
+        Title="Камера" 
+        ContentTemplate="{DataTemplate local:BarcodeScannerPage}" 
+        Route="BarcodeScannerPage"
+        Shell.NavBarIsVisible="False"/>
 </Shell>

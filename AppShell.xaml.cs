@@ -10,6 +10,7 @@
             Routing.RegisterRoute("ImportPage", typeof(ImportPage));
             Routing.RegisterRoute("ExportPage", typeof(ExportPage));
             Routing.RegisterRoute("DocumentPage", typeof(DocumentPage));
+            Routing.RegisterRoute("BarcodeScannerPage", typeof(BarcodeScannerPage));
         }
     }
 }
