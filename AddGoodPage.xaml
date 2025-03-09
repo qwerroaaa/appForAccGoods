@@ -56,7 +56,7 @@
         <!-- Основной контент -->
         <ScrollView Grid.Row="2">
             <VerticalStackLayout>
-                <!-- Здесь твои карточки товаров -->
+                <!-- Здесь описание товаров -->
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

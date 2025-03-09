@@ -59,10 +59,43 @@
             VerticalOptions= "Center"/>
         </Grid>
 
-        <!-- Основной контент -->
         <ScrollView Grid.Row="2">
-            <VerticalStackLayout>
-                <!-- Здесь твои карточки товаров -->
+            <VerticalStackLayout Padding="10">
+                <Frame BackgroundColor="#292929"
+       CornerRadius="10"
+       Padding="10"
+       HeightRequest="133"
+       HorizontalOptions="FillAndExpand"
+       HasShadow="False">
+
+                    <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto">
+                        <!-- Первый текст в левом верхнем углу -->
+                        <Label Text="Зеленое яблоко"
+               TextColor="White"
+               FontSize="16"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Start"
+               VerticalTextAlignment="Start"
+               Grid.Row="0" Grid.Column="0"
+                       Margin="0,0,0,0"/>
+
+                        <!-- Второй текст под первым -->
+                        <Label Text="Штрих-код: 12345689"
+               TextColor="White"
+               FontSize="14"
+               HorizontalTextAlignment="Start"
+               VerticalTextAlignment="Start"
+               Grid.Row="1" Grid.Column="0"
+                       Margin="0,-40,0,0"/>
+
+                        <!-- Картинка справа -->
+                        <Image Source="product_image.png"
+               WidthRequest="110"
+               HeightRequest="110"
+               Aspect="AspectFill"
+               Grid.RowSpan="2" Grid.Column="1"/>
+                    </Grid>
+                </Frame>
             </VerticalStackLayout>
         </ScrollView>
 
