@@ -1,6 +1,6 @@
 using ZXing.Net.Maui;
 
-namespace appForAccGoods;
+namespace appForAccGoods.View;
 
 public partial class BarcodeScannerPage : ContentPage
 {
