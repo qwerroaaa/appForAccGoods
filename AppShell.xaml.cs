@@ -12,6 +12,7 @@
             Routing.RegisterRoute("DocumentPage", typeof(DocumentPage));
             Routing.RegisterRoute("BarcodeScannerPage", typeof(BarcodeScannerPage));
             Routing.RegisterRoute("AddGoodPage", typeof(AddGoodPage));
+            Routing.RegisterRoute("MainPage", typeof(MainPage));
         }
 
         private void OnMenuTapped(object sender, EventArgs e)
