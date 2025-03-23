@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:appForAccGoods.ViewModel"
+             x:Class="appForAccGoods.View.AddGoodPage"
+             BackgroundColor="#BBBBBB">
+
+    <ContentPage.BindingContext>
+        <viewModels:AddGoodPageViewModel/>
+    </ContentPage.BindingContext>
+    <Grid RowDefinitions="Auto,Auto,*">
+
+        <!-- Шапка (чёрный фон с гамбургер-меню и заголовком) -->
+        <Grid Grid.Row="0"
+      HeightRequest="50"
+      BackgroundColor="#292929"
+      Padding="10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Image Source="keyboard_return_white.png"
+                WidthRequest="24"
+                HeightRequest="24"
+                VerticalOptions="Center"
+                Grid.Column="0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnReturnTapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="check_white.png"
+           WidthRequest="24"
+           HeightRequest="24"
+           VerticalOptions= "Center"
+           Grid.Column="2">
+            <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SaveProductCommand}"/>
+            </Image.GestureRecognizers>
+            </Image>
+
+            
+            <Label Text="Добавление товара"
+           Grid.Column="1"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           TextColor="White"
+           FontSize="24"
+           FontAttributes="Bold"
+           Margin="-15,0,0,0"/>
+        </Grid>
+
+        <!-- Оранжевая полоса с надписью "Основной склад" -->
+        <Grid Grid.Row="1"
+      HeightRequest="29"
+      BackgroundColor="#EC9704"
+      Padding="0">
+            <Label Text="Основной склад"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           TextColor="White"
+           FontSize="16"
+           FontAttributes="Bold"/>
+        </Grid>
+
+        <!-- Основной контент -->
+        <ScrollView Grid.Row="2">
+            <VerticalStackLayout Padding="10">
+                <!-- Название товара -->
+                <Label Text="Название товара"
+                   TextColor="#292929"
+                   FontSize="16"
+                   FontAttributes="Bold"/>
+                <Entry Placeholder="Введите название товара"
+                   Text="{Binding ProductName}"
+                   BackgroundColor="#BBBBBB"
+                   TextColor="#292929"
+                   HeightRequest="40"/>
+
+                <!-- Штрих-код -->
+                <Label Text="Штрих-код"
+                   TextColor="#292929"
+                   FontSize="16"
+                   FontAttributes="Bold"/>
+                <Entry Placeholder="Введите штрих-код"
+                   Text="{Binding Barcode}"
+                   BackgroundColor="#BBBBBB"
+                   TextColor="#292929"
+                   HeightRequest="40"/>
+
+                <!-- Количество -->
+                <Label Text="Количество"
+                   TextColor="#292929"
+                   FontSize="16"
+                   FontAttributes="Bold"/>
+                <Entry Placeholder="Введите количество"
+                   Text="{Binding Quantity}"
+                   BackgroundColor="#BBBBBB"
+                   TextColor="#292929"
+                   HeightRequest="40"/>
+
+                <!-- Описание -->
+                <Label Text="Описание"
+                   TextColor="#292929"
+                   FontSize="16"
+                   FontAttributes="Bold"/>
+                <Entry Placeholder="Введите описание товара"
+                   Text="{Binding Description}"
+                   BackgroundColor="#BBBBBB"
+                   TextColor="#292929"
+                   HeightRequest="40"/>
+
+                <!-- Фото товара -->
+                <Label Text="Фото товара"
+                   TextColor="#292929"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,10"/>
+                <Frame BackgroundColor="#E1E1E1"
+                   HeightRequest="202"
+                   CornerRadius="10"
+                   HasShadow="True"
+                   Padding="0"
+                   HorizontalOptions="FillAndExpand">
+                    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                        <Image Source="camera_black.png" 
+                           HeightRequest="120" 
+                           WidthRequest="120"/>
+                    </Grid>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

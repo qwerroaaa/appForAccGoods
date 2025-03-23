@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="appForAccGoods.ProductsPage"
+             x:Class="appForAccGoods.View.ProductsPage"
              BackgroundColor="#BBBBBB">
     
     
@@ -58,41 +58,22 @@
         <!-- Основной контент -->
         <ScrollView Grid.Row="2">
             <VerticalStackLayout Padding="10">
-                <Frame BackgroundColor="#292929"
-               CornerRadius="10"
-               Padding="10"
-               HeightRequest="133"
-               HorizontalOptions="FillAndExpand"
-               HasShadow="False">
-
-                    <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto">
-                        <!-- Первый текст в левом верхнем углу -->
-                        <Label Text="Зеленое яблоко"
-                       TextColor="White"
-                       FontSize="16"
-                       FontAttributes="Bold"
-                       HorizontalTextAlignment="Start"
-                       VerticalTextAlignment="Start"
-                       Grid.Row="0" Grid.Column="0"
-                               Margin="0,0,0,0"/>
-
-                        <!-- Второй текст под первым -->
-                        <Label Text="Штрих-код: 12345689"
-                       TextColor="White"
-                       FontSize="14"
-                       HorizontalTextAlignment="Start"
-                       VerticalTextAlignment="Start"
-                       Grid.Row="1" Grid.Column="0"
-                               Margin="0,-40,0,0"/>
-
-                        <!-- Картинка справа -->
-                        <Image Source="product_image.png"
-                       WidthRequest="110"
-                       HeightRequest="110"
-                       Aspect="AspectFill"
-                       Grid.RowSpan="2" Grid.Column="1"/>
-                    </Grid>
-                </Frame>
+                <CollectionView ItemsSource="{Binding Products}" 
+                                SelectionMode="Single"
+                                SelectedItem="{Binding SelectedProduct, Mode=TwoWay}"
+                                SelectionChangedCommand="{Binding SelectProductCommand}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#292929" CornerRadius="10" Padding="10" HeightRequest="133" HorizontalOptions="FillAndExpand" HasShadow="False">
+                                <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto">
+                                    <Label Text="{Binding Name}" TextColor="White" FontSize="16" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>
+                                    <Label Text="{Binding Barcode, StringFormat='Штрих-код: {0}'}" TextColor="White" FontSize="14" Grid.Row="1" Grid.Column="0"/>
+                                    <Image Source="{Binding Image}" WidthRequest="110" HeightRequest="110" Aspect="AspectFill" Grid.RowSpan="2" Grid.Column="1"/>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </VerticalStackLayout>
         </ScrollView>
 

@@ -1,4 +1,4 @@
-﻿namespace appForAccGoods
+﻿namespace appForAccGoods.View
 {
     public partial class MainPage : ContentPage
     {
