@@ -41,8 +41,12 @@ namespace appForAccGoods.ViewModel
         private async Task OnProductSelected(ProductModel selectedProduct)
         {
             if (selectedProduct == null)
+            {
+                Console.WriteLine("OnProductSelected: выбранный продукт null");
                 return;
+            }
 
+            Console.WriteLine($"OnProductSelected: Переход на AddGoodPage с продуктом {selectedProduct.Name}");
             // Переход на AddGoodPage и передача данных через параметры
             var navigationParams = new Dictionary<string, object>
             {
