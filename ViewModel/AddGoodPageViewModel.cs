@@ -11,8 +11,15 @@ using System.Windows.Input;
 
 namespace appForAccGoods.ViewModel
 {
+    [QueryProperty("SelectedProduct", "SelectedProduct")]
     public partial class AddGoodPageViewModel : ObservableObject
     {
+        private ProductModel _selectedProduct;
+        public ProductModel SelectedProduct
+        {
+            get => _selectedProduct;
+            set => SetProperty(ref _selectedProduct, value);
+        }
         // Свойства, к которым будут привязаны поля ввода
         [ObservableProperty]
         private string productName;
@@ -43,10 +50,13 @@ namespace appForAccGoods.ViewModel
                 Barcode = this.Barcode,
                 Quantity = int.TryParse(this.Quantity, out int q) ? q : 0,
                 Description = this.Description,
-                PhotoPath = string.Empty // Заглушка для фото
+                PhotoPath = "product_image.png" //Заглушка, пока не хочу делать обработку картинок
             };
 
-            // Для примера выводим сообщение (в реальном проекте вызовем UseCase/Repository)
+            // Отправляем товар в ProductPage
+            MessagingCenter.Send(this, "AddProduct", newProduct);
+
+            // Для примера выводим сообщение
             await Shell.Current.DisplayAlert("Товар создан",
                 $"Создан товар: {newProduct.Name}", "OK");
 
